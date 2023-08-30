@@ -1,1 +1,2 @@
-Инициализация проекта
+yarn install
+yarn start
