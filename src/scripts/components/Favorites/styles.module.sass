@@ -1,0 +1,155 @@
+.loader
+  border-radius: 10px
+  font-weight: 400
+  font-size: 20px
+  padding: 14px 54px 14px 15px
+  width: 100%
+  background: #FFFFFF
+  transition: 0.12s
+  border: 1px solid #d1d1d1
+.favorites
+  &__notFound
+    border-radius: 10px
+    font-weight: 400
+    font-size: 20px
+    padding: 14px 54px 14px 15px
+    width: 100%
+    background: #FFFFFF
+    transition: 0.12s
+    border: 1px solid #d1d1d1
+  &__wrapper
+    width: 100%
+    height: 100%
+    padding: 40px 0 0 0
+
+  &__container
+    max-width: 1040px
+    width: 100%
+    margin: 0 auto
+
+
+.favoritesList__container
+  max-width: 1040px
+  height: 47px
+  width: 100%
+  background: #FFFFFF
+  margin: 0 0 2px 0
+  display: flex
+  font-weight: 500
+  font-size: 16px
+  line-height: 20px
+  color: #000000
+  padding: 0 0 0 20px
+
+
+.favorites__title
+  margin: 0 0 40px 0
+  font-weight: 400
+  font-size: 28px
+  line-height: 40px
+  color: #000000
+
+
+
+.favoritesList__container_active
+  max-width: 1040px
+  height: 47px
+  width: 100%
+  background: #F1F1F1
+  margin: 0 0 2px 0
+  display: flex
+  font-weight: 500
+  font-size: 16px
+  line-height: 20px
+  color: #000000
+  padding: 0 0 0 20px
+
+.favoritesList__title
+  max-width: 300px
+  justify-content: space-between
+  font-weight: 700
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+
+
+.favorites__popUpContainer
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: rgba(117, 199, 255, 1)
+  z-index: 50
+
+
+.favoritesItem
+  display: flex
+  justify-content: space-between
+  width: 100%
+  height: 100%
+
+.favoritesList__button
+  height: 47px
+
+.favoritesList__controlBlock
+  display: flex
+  justify-items: center
+  align-items: center
+  max-height: 47px
+  height: 100%
+
+.favoritesList__buttonEdit
+  cursor: pointer
+  height: 47px
+  font-weight: 400
+  font-size: 14px
+  line-height: 20px
+  color: #1390E5
+  background: inherit
+  margin: 0 30px 0 0
+  border: inherit
+
+.favoritesList__buttonDelete
+  cursor: pointer
+  border: inherit
+  height: 47px
+  background: inherit
+  font-weight: 400
+  font-size: 14px
+  line-height: 20px
+  color: #FF0000
+  margin: 0 20px 0 0
+
+
+
+.favoritesList__wideScreens
+  display: inherit
+
+.narrowScreens
+  display: none
+
+@media (max-width: 767px)
+  .favoritesList__title
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
+    padding: 10px 5px 0 0px
+
+  .narrowScreens
+    display: inherit
+
+  .favoritesList__wideScreens
+    display: none
+
+
+.containerLoader
+  position: absolute
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+

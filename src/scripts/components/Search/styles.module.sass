@@ -1,0 +1,144 @@
+//.searchContainer
+//  max-width: 1040px
+//  max-height: 720px
+//  height: 100%
+//  width: 100%
+//  margin: 0 auto
+//  display: flex
+//  justify-content: center
+//  padding: 180px 0 0 0
+//
+
+//.formWrapper
+//  max-width: 686px
+//  width: 100%
+
+//@media(max-width: 767px)
+//  .formWrapper
+//    max-width: 304px
+//
+//  .searchContainer
+//    padding: 200px 0 0 0
+//
+//  .formContainer
+//    margin: 0 auto
+//    display: flex
+//    flex-direction: column
+//    max-width: 686px
+//    min-height: 100%
+//
+
+//.formContainerVideos
+//  display: flex
+//  flex-direction: column
+//  max-width: 1040px
+//  width: 100%
+//  margin: 0 0 40px 0
+
+//.formTitleVideos
+//  display: flex
+//  justify-content: flex-start
+//  font-weight: 400
+//  font-size: 36px
+//  line-height: 52px
+//  color: #000000
+//  text-align: center
+//  margin: 0 0 40px 0
+
+//.inputContainerVideos
+//  position: relative
+//  max-width: 1040px
+//  display: flex
+//  max-height: 52px
+//  height: 100%
+
+//.saveFavoriteWrappe
+//  position: absolute
+//  top: 30px
+//  left: -99px
+
+//.buttonFavorite
+//  position: absolute
+//  right: 147px
+//  top: 14px
+
+//.buttonFavorite button
+//  border: inherit
+//  background: inherit
+//
+//@media (max-width: 767px)
+//  .formContainer
+//    max-width: 304px
+//
+//  .searchButtonSpan
+//    font-weight: 400
+//    font-size: 16px
+//.buttonFavorite
+//  position: absolute
+//  right: 110px
+//  top: 14px
+
+
+.search
+  padding: 220px 30px 0 30px
+  &__title
+    font-weight: 400
+    font-size: 36px
+    line-height: 52px
+    color: #000000
+    text-align: center
+    margin: 0 0 40px 0
+  &__inputContainer
+    border-radius: 0px 10px 10px 0px
+    margin: 0 auto
+    position: relative
+    max-width: 686px
+    display: flex
+    max-height: 52px
+    height: 100%
+    z-index: 10
+  &__input
+    border-radius: 10px 0 0 10px
+    font-weight: 400
+    font-size: 20px
+    padding: 14px 54px 14px 15px
+    width: 100%
+    border: none
+    background: #FFFFFF
+    transition: 0.12s
+    border-top: 1px solid #d1d1d1
+    border-left: 1px solid #d1d1d1
+    border-bottom: 1px solid #d1d1d1
+    &:focus
+      border-top: 1px solid #1390E5
+      border-left: 1px solid #1390E5
+      border-bottom: 1px solid #1390E5
+      border-right: none
+      transition: 0.12s
+      background: #C5E4F9
+      outline: none
+  &__button
+    padding: 14px 46px
+    background: #1390E5
+    border: inherit
+    border-radius: 0px 10px 10px 0px
+    height: 52px
+    cursor: pointer
+    font-weight: 400
+    font-size: 20px
+    line-height: 24px
+    text-align: center
+    color: #FFFFFF
+    transition: 0.12s
+    &:hover
+      transition: 0.12s
+      background: #1180CB
+
+@media (max-width: 767px)
+  .search__input
+    padding: 14px 24px 14px 15px
+    font-size:  16px
+
+  .search__button
+    padding: 14px 20px
+    font-size:  16px

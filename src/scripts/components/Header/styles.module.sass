@@ -1,0 +1,117 @@
+.header
+  width: 100%
+  background: white
+  &__wrapper
+    background: white
+    margin: 0 auto 0px auto
+    height: 80px
+    max-width: 1040px
+    width: 100%
+    display: flex
+    justify-content: space-between
+  &__logo
+    user-select: none
+    pointer-events: none
+    cursor: pointer
+    display: flex
+    align-items: center
+    max-width: 18px
+    max-height: 100%
+    width: 100%
+    height: 100%
+    margin: 0 55px 0 50px
+  &__logo img
+    max-width: 48px
+    width: 100%
+    height: 48px
+    object-fit: cover
+  &__linkGroup
+    align-items: center
+    justify-content: center
+    display: flex
+    gap: 40px
+  &__searchLinkContainer
+    display: flex
+    height: 100%
+    align-items: center
+    justify-items: center
+    border: none
+    transition: color 0.12s
+  &__searchLinkContainer_active
+    color: #1390E5
+    border-bottom: 2px solid #1390E5
+    margin: 0 0 -2px 0
+    transition: color 0.12s
+  &__searchLink
+    cursor: pointer
+    max-height: 28px
+    min-width: 60px
+    width: 100%
+    background: inherit
+    display: flex
+    justify-content: center
+    font-weight: 400
+    font-size: 18px
+    line-height: 28px
+    color: rgba(39, 39, 39, 0.3)
+    border: none
+    transition: color 0.12s
+    &_active
+      color: #1390E5
+      transition: color 0.12s
+  &__signOut
+    height: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__navigate
+    display: flex
+  &__signOutButton
+    max-height: 28px
+    cursor: pointer
+    border: inherit
+    background: inherit
+    font-weight: 400
+    font-size: 18px
+    line-height: 28px
+    color: #1390E5
+    transition: 0.12s
+    &:hover
+      transition: 0.12s
+      color: #1180CB
+
+
+@media (max-width: 1439px)
+  .header__signOut
+    margin: 0 40px 0px 0
+
+@media (max-width: 767px)
+  .header__logo
+    margin: 0 23px 0 13px
+
+  .header__searchLink
+    font-size: 14px
+    margin: 0px 20px 0 0
+
+  .header__searchLink_active
+    line-height: 28px
+    font-size: 14px
+    margin: 26px 20px 0 0
+
+  .buttonFavorites
+    font-size: 14px
+
+  .buttonFavoritesActive
+    font-size: 14px
+
+  .header__signOut button
+    font-weight: 400
+    font-size: 14px
+    line-height: 28px
+    color: #1390E5
+    margin: 0 19px 0 0
+
+  .header__signOut
+    display: flex
+    justify-content: flex-end
+    margin: 0 0px 0 0

@@ -1,0 +1,536 @@
+.search
+  padding: 220px 30px 0 30px
+  &__title
+    font-weight: 400
+    font-size: 36px
+    line-height: 52px
+    color: #000000
+    text-align: left
+    margin: 0 0 12px 0
+  &__inputContainer
+    position: relative
+    border-radius: 0px 10px 10px 0px
+    margin: 0 auto 40px auto
+    position: relative
+    max-width: 100%
+    display: flex
+    max-height: 52px
+    height: 100%
+    z-index: 10
+  &__input
+    border-radius: 10px 0 0 10px
+    font-weight: 400
+    font-size: 20px
+    padding: 14px 54px 14px 15px
+    width: 100%
+    background: #FFFFFF
+    transition: 0.12s
+    border: 1px solid #d1d1d1
+    &:focus
+      border: 1px solid #1390E5
+      transition: 0.12s
+      background: #C5E4F9
+      outline: none
+  &__button
+    padding: 14px 46px
+    background: #1390E5
+    border: inherit
+    border-radius: 0px 10px 10px 0px
+    height: 52px
+    cursor: pointer
+    font-weight: 400
+    font-size: 20px
+    line-height: 24px
+    text-align: center
+    color: #FFFFFF
+    transition: 0.12s
+    &:hover
+      transition: 0.12s
+      background: #1180CB
+  &__favoriteButton
+    cursor: pointer
+    path
+      fill: #FFFFFF
+      transition: 0.12s
+      stroke: #1390E5
+    &__active
+      svg
+        transition: 0.12s
+        fill: #C5E4F9
+  &__buttonFavorite
+    position: absolute
+    right: 165px
+    top: 14px
+  &__buttonFavorite button
+    border: inherit
+    background: inherit
+  &__savedModalWrapper
+    position: absolute
+    top: 30px
+    left: -99px
+  &__videosContainer
+    padding: 40px 0 0 0
+    max-width: 1040px
+    width: 100%
+    margin: 0 auto
+  &__viewGrid
+    display: grid
+    grid-template-columns: 245px 245px 245px 245px
+    row-gap: 28px
+    column-gap: 20px
+  &__currentRequestText
+    font-weight: 700
+    font-size: 16px
+    line-height: 24px
+  &__subtitle
+    max-width: 343px
+    font-size: 16px
+    line-height: 24px
+    margin: 0 0 20px 0
+  &__info
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__viewSwitcher
+    max-height: 24px
+    max-width: 86px
+  &__viewSwitcher button
+    max-width: 24px
+    max-height: 24px
+    width: 100%
+    height: 100%
+    border: inherit
+    background: inherit
+  &__viewSwitcherList
+    margin: 0 23px 0 0
+  &__modalRequestPopUp
+    position: absolute
+    top: 0
+    left: 0
+    height: 120%
+    width: 100%
+    background: rgba(117, 199, 255, 0.8)
+    overflow-y: hidden
+    z-index: 50
+  &__switcherGrid
+    cursor: pointer
+    path
+      transition: 0.12s
+      stroke: #939393
+    &_active
+      path
+        opacity: 1
+        transition: 0.12s
+        stroke: #000000
+
+  &__switcherList
+    cursor: pointer
+    path
+      transition: 0.12s
+      stroke: #939393
+    &_active
+      path
+        opacity: 1
+        transition: 0.12s
+        stroke: #000000
+.requestPopUp__input
+  border-radius: 10px
+  font-weight: 400
+  font-size: 20px
+  padding: 14px 54px 14px 15px
+  width: 100%
+  background: #FFFFFF
+  transition: 0.12s
+  border: 1px solid #d1d1d1
+  &:focus
+    border: 1px solid #1390E5
+    transition: 0.12s
+    background: #C5E4F9
+    outline: none
+
+.saveModal
+  width: 220px
+  height: 117px
+  background: #FFFFFF
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15)
+  border-radius: 10px
+  z-index: 10
+  &__arrayLeft
+    position: absolute
+    top: 0
+    left: 95px
+    border-top: 5px solid white
+    z-index: 150
+    width: 20px
+    display: flex
+    margin: 0 auto
+    transform: rotate(-45deg)
+    color: white
+  &__arrayRight
+    position: absolute
+    top: 0
+    right: 95px
+    border-top: 5px solid white
+    z-index: 150
+    width: 20px
+    display: flex
+    margin: 0 auto
+    transform: rotate(45deg)
+    color: white
+  &__body
+    padding: 15px
+    font-family: 'PT Sans'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+    color: #939393
+  &__navigate
+    cursor: pointer
+    padding: 0 15px 15px 15px
+    font-family: 'PT Sans'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+    color: #1390E5
+    transition: 0.12s
+    &:hover
+      color: #1180CB
+      transition: 0.12s
+
+@media (max-width: 767px)
+  .formContainer
+    max-width: 304px
+
+  .searchButtonSpan
+    font-weight: 400
+    font-size: 16px
+  .search__buttonFavorite
+    position: absolute
+    right: 110px
+    top: 14px
+
+.videoItem
+  &__visibleList
+    max-width: 687px
+    display: flex
+    margin: 0 0 32px 0
+  &__visibleList:last-child
+    margin: 0 0 0 0
+    padding: 0 0 4px 0
+  &__visibleList img
+    max-width: 157px
+    max-height: 87px
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 10px
+    margin: 0 20px 0 0
+
+  &__title
+    margin: 0 0 8px 0
+    font-weight: 500
+    font-size: 14px
+    line-height: 16px
+    color: #272727
+
+  &__chanelTitle
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+    color: rgba(23, 23, 25, 0.3)
+    padding: 0 0 8px 0
+
+  &__visibleGrid img
+    border-radius: 10px
+    max-width: 245px
+    max-height: 137px
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.plug
+  display: flex
+  justify-content: center
+  align-items: center
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 24px
+  color: #272727
+.plugSpan
+  font-style: normal
+  font-weight: 500
+  font-size: 14px
+  line-height: 16px
+  font-family: 'Roboto'
+  color: #000000
+@media (max-width: 1439px)
+  .search__viewGrid
+    display: grid
+    grid-template-columns: 216px 216px 216px
+    row-gap: 28px
+    column-gap: 20px
+
+  .search__subtitle
+    margin: 0 0 40px 0
+
+  .search__videosContainer
+    max-width: 688px
+
+.containerLoader
+  position: absolute
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+@media (max-width: 767px)
+  .videoItem__title
+    max-height: 32px
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
+
+  .videoItem__visibleList
+    max-width: 687px
+    display: flex
+    margin: 0 0 24px 0
+  .search__subtitle
+    max-width: 216px
+  .search__currentRequestText
+    font-size: 12px
+  .search__subtitle
+    font-size: 12px
+  .videoItem__visibleList img
+    margin: 0 15px 0 0
+  .search__viewGrid
+    display: grid
+    grid-template-columns: 303px
+    row-gap: 28px
+    column-gap: 20px
+
+  .search__videosContainer
+    max-width: 303px
+
+  .videoItem__visibleGrid img
+    border-radius: 10px
+    max-width: 303px
+    max-height: 137px
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.videos
+  &__rangeSlider
+    max-height: 70px
+    height: 100%
+    max-width: 430px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0px 0 36px 0
+  &__rangeValue
+    width: 100px
+    height: 48px
+    border: 1px solid rgba(23, 23, 25, 0.2)
+    border-radius: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 5px 15px 5px 15px
+    font-weight: 400
+    font-size: 20px
+    line-height: 24px
+    text-align: center
+    color: #272727
+  &__rangeContainer
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+  &__rangeTitle
+    font-weight: 400
+    font-size: 20px
+
+.sliderInput
+  -webkit-appearance: none
+  border: 1px solid rgba(23, 23, 25, 0.2)
+  border-radius: 3px
+  height: 6px
+  width: 310px
+  outline: none
+  background: rgba(23, 23, 25, 0.3)
+
+.sliderInput::-webkit-slider-thumb
+  -webkit-appearance: none
+  border: 2px solid #1390E5
+  height: 18px
+  width: 18px
+  border-radius: 18px
+  background: #FFFFFF
+  cursor: pointer
+
+
+@media(max-width: 767px)
+  .videos__rangeTitle
+    margin: 0 0 24px 0
+
+  .sliderInput
+
+    width: 169px
+
+
+.requestPopUp
+  &__title
+    margin: 36px 0 0px 0
+    font-weight: 500
+    font-size: 18px
+    line-height: 28px
+    width: 100%
+    text-align: center
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+  &__requestTitleBlock
+    position: relative
+    max-width: 430px
+    max-height: 70px
+    width: 100%
+    height: 100%
+    margin: 0 0 24px 0
+  &__requestNameBlock
+    position: relative
+    max-width: 430px
+    max-height: 70px
+    width: 100%
+    height: 100%
+    margin: 0 0 24px 0
+  &__selectBlock
+    max-width: 430px
+    max-height: 75px
+    height: 100%
+    width: 100%
+    margin: 0 0 24px 0
+  &__labelSelect
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    color: #272727
+  &__select
+    padding: 12px 15px
+    font-weight: 400
+    font-size: 20px
+    line-height: 24px
+    color: #272727
+    height: 100%
+    width: 100%
+    border-radius: 10px 0 0 10px
+    border: 1px solid rgba(23, 23, 25, 0.3)
+    opacity: 0.4
+    &:focus
+      opacity: 1
+      outline: rgba(197, 228, 249, 0.3)
+      border: 1px solid #1390E5
+      border-radius: 10px 0 0 10px
+      background: rgba(197, 228, 249, 0.3)
+  &__form
+    margin: -36px 0 0 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+  &__labelRequestName
+    padding: 0 0 0 10px
+    font-size: 16px
+    line-height: 22px
+    color: #272727
+  &__labelRequestTitle
+    font-size: 16px
+    line-height: 22px
+    color: #272727
+  &__rangeSliderContainer
+    margin: 0 0 36px 0
+    max-width: 430px
+    width: 100%
+    max-height: 67px
+  &__controlButton
+    display: flex
+    max-width: 430px
+    max-height: 52px
+    height: 100%
+    width: 100%
+  &__labelRequestStar
+    position: absolute
+    top: 0
+    left: 0px
+    color: #FF0000
+
+
+.titlePopap
+  font-weight: 500
+  font-size: 18px
+  line-height: 28px
+
+.dontSave
+  cursor: pointer
+  margin: 0 10px 0 0
+  width: 100%
+  height: 100%
+  background: inherit
+  border-radius: 10px
+  border: 1px solid #1390E5
+  font-weight: 400
+  font-size: 20px
+  line-height: 24px
+  color: #1390E5
+  box-shadow: none
+  transition: 0.12s
+  &:hover
+    box-shadow: 0 2px 6px rgba(19, 144, 229, 0.3)
+    transition: 0.12s
+
+.saving
+  cursor: pointer
+  color: #FFFFFF
+  font-weight: 400
+  font-size: 20px
+  line-height: 24px
+  width: 100%
+  height: 100%
+  background: #1390E5
+  border-radius: 10px
+  border: inherit
+  transition: 0.12s
+  &:hover
+    background: #1180CB
+    transition: 0.12s
+
+
+.requestPopUp
+  max-width: 510px
+  max-height: 573px
+  width: 100%
+  height: 100%
+  background: #FFFFFF
+  box-shadow: 0px 10px 50px rgba(19, 144, 229, 0.8)
+  border-radius: 10px
+  margin: 113px auto 0 auto
+  z-index: 100
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+@media(max-width: 767px)
+  .requestPopUp
+    max-width: 304px
+    padding: 0 10px
